@@ -15,3 +15,16 @@ for row in range(8):
             print("*", end = "")
         else: print(end = " ")
     print()
+
+# I
+
+for row in range(8):
+    for col in range (10):
+        if (row == 0 or row == 1) and (col != 0 or col != 9):
+            print("*", end = "")
+        elif (row != 0 or row != 1) and (col == 4 or col == 5):
+            print("*", end = "")
+        elif (row == 6 or row == 7) and (col != 0 or col != 9):
+            print("*", end = "")
+        else: print(end = " ")
+    print()
