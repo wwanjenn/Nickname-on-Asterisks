@@ -1,11 +1,9 @@
 # Assignment 1:
 # Create a program that will print your nickname using only asterisk character (*)
 
-# LIST
-
-list_J = [[],[],[],[],[],[],[],[]] * 10
-print(len(list_J))
 # J
+
+list_J = [[" "," "," "," "," "," "," "," ", " ", " "]] * 8
 
 for row in range(8):
     for col in range (10):
@@ -19,8 +17,11 @@ for row in range(8):
             print("*", end = "")
         else: print(end = " ")
     print()
+    
 
 # I
+
+list_I = [[" "," "," "," "," "," "," "," ", " ", " "]] * 8
 
 for row in range(8):
     for col in range (10):
@@ -34,6 +35,8 @@ for row in range(8):
     print()
 
 # N
+
+list_N = [[" "," "," "," "," "," "," "," ", " ", " "]] * 8
 
 for row in range(8):
     for col in range (10):
