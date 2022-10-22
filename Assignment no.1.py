@@ -3,52 +3,72 @@
 
 # J
 
-list_J = [[" "," "," "," "," "," "," "," ", " ", " "]] * 8
+list_J = [[" " for i in range(8)] for n in range(8)]
+print(len(list_J))
 
 for row in range(8):
-    for col in range (10):
-        if (row == 0 or row == 1) and (col == 1 or col == 2 or col == 3 or col == 4 or col == 5 or col == 6 or col == 7 or col == 8):
-            print("*", end = "")
-        elif (row != 0 or row != 1) and (col == 4 or col == 5):
-            print("*", end = "")
-        elif (row == 4 or row == 5 or row == 6 or row == 7) and (col == 1 or col == 2):
-            print("*", end = "")
-        elif (row == 6 or row == 7) and col == 3:
-            print("*", end = "")
-        else: print(end = " ")
-    print()
-    
+    for col in range (8):
+        if row == 0 or row == 1:
+            list_J[row][col] = "*"
+        if col == 3 or col == 4:
+            list_J[row][col] = "*"
+        if row == 6 and (col == 0 or col == 1 or col == 2):
+            list_J[row][col] = "*"
+        if row == 7 and (col == 1 or col == 2):
+            list_J[row][col] = "*"
+        if row == 4 and col == 0:
+            list_J[row][col] = "*"
+        if row == 5 and (col == 0 or col == 1):
+            list_J[row][col] = "*"
 
 # I
 
-list_I = [[" "," "," "," "," "," "," "," ", " ", " "]] * 8
+list_I = [[" " for i in range(8)] for n in range(8)]
 
 for row in range(8):
-    for col in range (10):
-        if  (col == 1 or col == 2 or col == 3 or col == 4 or col == 5 or col == 6 or col == 7 or col == 8) and (row == 0 or row == 1):
-            print("*", end = "")
-        elif (row != 0 or row != 1) and (col == 4 or col == 5):
-            print("*", end = "")
-        elif (row == 6 or row == 7) and (col == 1 or col == 2 or col == 3 or col == 4 or col == 5 or col == 6 or col == 7 or col == 8):
-            print("*", end = "")
-        else: print(end = " ")
-    print()
+    for col in range (8):
+        if col == 3 or col == 4:
+            list_I[row][col] = "*"
+        if (row == 0 or row == 1 or row == 6 or row == 7):
+            list_I[row][col] = "*"
 
 # N
 
-list_N = [[" "," "," "," "," "," "," "," ", " ", " "]] * 8
+list_N = [[" " for i in range(8)] for n in range(8)]
 
 for row in range(8):
-    for col in range (10):
-        if (col == 1 or col == 2 or col == 7 or col == 8):
-            print("*", end = "")
-        elif col == 3 and (row == 1 or row == 2 or row == 3):
-            print("*", end = "")
-        elif col == 4 and (row == 2 or row == 3 or row == 4):
-            print("*", end = "")
-        elif col == 5 and (row == 3 or row == 4 or row == 5):
-            print("*", end = "")
-        elif col == 6 and (row == 4 or row == 5 or row == 6):
-            print("*", end = "")
-        else: print(end = " ")
+    for col in range (8):
+        if (col == 0 or col == 1 or col == 6 or col == 7):
+            list_N[row][col] = "*"
+        if row == 1:
+            if col == 2:
+                list_N[row][col] = "*"
+        if row == 2:
+            if col == 2 or col == 3:
+                list_N[row][col] = "*"
+        if row == 3:
+            if col == 2 or col == 3 or col == 4:
+                list_N[row][col] = "*"
+        if row == 4:
+            if col == 3 or col == 4 or col ==5:
+                list_N[row][col] = "*"
+        if row == 5:
+            if col == 4 or col == 5:
+                list_N[row][col] = "*"
+        if row == 6:
+            if col == 5:
+                list_N[row][col] = "*"
+
+# PRINT
+
+for s in range(8):
+    for k in range(8):
+        print(list_J[s][k], end = ' ')
+    print(end = " ")
+    for k in range(8):
+        print(list_I[s][k], end = ' ')
+    print(end = " ")
+    for k in range(8):
+        print(list_N[s][k], end = ' ')
+    print(end = " ")
     print()
