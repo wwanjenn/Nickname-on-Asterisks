@@ -1,10 +1,11 @@
+import sys
+from colorama import Fore, Back
 # Assignment 1:
 # Create a program that will print your nickname using only asterisk character (*)
 
 # J
 
 list_J = [[" " for i in range(8)] for n in range(8)]
-print(len(list_J))
 
 for row in range(8):
     for col in range (8):
@@ -63,12 +64,12 @@ for row in range(8):
 
 for s in range(8):
     for k in range(8):
-        print(list_J[s][k], end = ' ')
+        print(Fore.LIGHTWHITE_EX + Back.LIGHTCYAN_EX + list_J[s][k], end = ' ')
     print(end = " ")
     for k in range(8):
-        print(list_I[s][k], end = ' ')
+        print(Fore.LIGHTWHITE_EX + Back.LIGHTCYAN_EX + list_I[s][k], end = ' ')
     print(end = " ")
     for k in range(8):
-        print(list_N[s][k], end = ' ')
+        print(Fore.LIGHTWHITE_EX + Back.LIGHTCYAN_EX + list_N[s][k], end = ' ')
     print(end = " ")
     print()
